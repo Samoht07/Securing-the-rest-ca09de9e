@@ -39,13 +39,13 @@
  $stmt = $pdo->query('SELECT * FROM vragen');
  while ($row = $stmt->fetch())
  {
-     ?>
+        ?>
     <tr>
         <td><?= $row['naam']?></td>
         <td><?= $row['vraag']?></td>
     </tr>
      <?php
-     //echo $row['title']. $row['rating']. "\n";
+     
  }
     ?>
 </table>

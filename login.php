@@ -51,17 +51,17 @@ try {
      throw new \PDOException($e->getMessage(), (int)$e->getCode());
 }
 
-if(isset($_POST['submit'])){ // Fetching variables of the form which travels in URL
-$naam = $_POST['username'];
-$wachtwoord = $_POST['password'];
+if(isset($_POST['submit'])) { // Fetching variables of the form which travels in URL
+    $naam = $_POST['username'];
+    $wachtwoord = $_POST['password'];
 
-if ($naam == 'admin' && $wachtwoord == 'admin'){
-    header('location: display.php');
-} elseif ($naam == ''|| $wachtwoord == '') {
-    echo "<p>Insertion Failed <br/> Some Fields are Blank....!!</p>";
-} else {
-    header('location: submit.php');
-}
+    if ($naam == 'admin' && $wachtwoord == 'admin') {
+        header('location: display.php');
+    } elseif ($naam == ''|| $wachtwoord == '') {
+        echo "<p>Insertion Failed <br/> Some Fields are Blank....!!</p>";
+    } else {
+        header('location: submit.php');
+    }
 }
 
 ?>
