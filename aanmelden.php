@@ -58,7 +58,7 @@ if(isset($_POST['submit'])) { // Fetching variables of the form which travels in
     $wachtwoord = $_POST['password'];
     $email = $_POST['email'];
 
-    if ($naam != '' || $vraag != '')  {
+    if ($naam != '' || $vraag != '') {
         $query = $pdo->query("insert into members(username, password, email) values ('$naam', '$wachtwoord', '$email')");
     } else {
         echo "<p>Insertion Failed <br/> Some Fields are Blank....!!</p>";
